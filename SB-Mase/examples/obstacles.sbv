@@ -1,0 +1,56 @@
+canvas
+	size 500 500
+	color 200 200 200
+
+endcanvas
+
+class corner
+light shape ellipse color 100 100 100 fixed size 10 10
+
+class obstacle
+shape rectangle color 50 50 50 massive static	
+
+endclasses
+
+instance corner
+	position 100 100
+	name corner_tl
+
+instance corner
+	position 400 100
+	name corner_tr
+
+instance corner
+	position 400 400
+	name corner_br
+
+instance corner
+	position 100 400
+	name corner_bl
+
+instance obstacle
+	size 60 10
+	position 200 90
+	rotation 50
+	name obst1
+
+instance obstacle
+	size 60 30
+	position 375 250
+	rotation 0
+	name obst2
+
+instance obstacle
+	size 60 30
+	position 200 445
+	rotation 0
+	name obst3
+
+instance obstacle
+	size 80 10
+	position 190 375
+	rotation 120
+	name obst4
+
+endinstances
+

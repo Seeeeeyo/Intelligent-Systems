@@ -1,0 +1,108 @@
+canvas
+	size 600 600
+	color 127 32 32
+
+endcanvas
+
+class base_area
+light shape ellipse color 200 100 100 fixed size 60 60
+
+class obstacle
+shape rectangle color 160 64 64 massive static	
+
+class grain
+shape rectangle color 255 255 0 fixed size 3 3 massive
+
+class sample
+shape rectangle color 255 0 0 flock size 4 4 massive movable
+
+endclasses
+
+instance base_area
+	position 270 270
+	name base_area1
+
+instance obstacle
+	size 20 20
+	position 140 160
+	rotation 10
+	name rocky1
+	
+instance obstacle
+	size 30 20
+	position 240 400
+	rotation 25
+	name rocky2
+
+instance obstacle
+	size 40 40
+	position 360 150
+	rotation 60
+	name rocky3
+
+instance obstacle
+	size 20 20
+	position 100 200
+	rotation 0
+	name rocky4
+
+instance obstacle
+	size 40 20
+	position 200 340
+	rotation 45
+	name rocky5
+
+instance obstacle
+	size 100 10
+	position 330 330
+	rotation 135
+	name rocky6
+
+instance obstacle
+	size 20 20
+	position 500 100
+	rotation 0
+	name rocky7
+
+instance obstacle
+	size 40 20
+	position 345 410
+	rotation 60
+	name rocky8
+
+instance sample
+	shape ellipse
+	position 50 100
+	rotation 0
+	size 80 80
+	items 10
+	distribution uniform
+
+instance sample
+	shape ellipse
+	position 505 15
+	rotation 0
+	size 90 90
+	items 15
+	distribution normal
+
+instance sample
+	shape ellipse
+	position 370 420
+	rotation 0
+	size 100 100
+	items 20
+	distribution normal
+
+instance sample
+	shape ellipse
+	position 70 350
+	rotation 0
+	size 100 100
+	items 10
+	distribution normal
+	
+endinstances
+
+
+
