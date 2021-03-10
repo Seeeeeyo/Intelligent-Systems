@@ -1,0 +1,29 @@
+% RAAR Language Keywords
+%	Version 1: De Jong, Puijker, Torben-Nielsen
+%	Version 2: De Jong
+
+PROCESS
+INPUT
+OUTPUT
+REGISTER
+BEHAVIOUR
+BEHAVIOR
+END
+REAL
+RANDOM
+STRING
+LIST
+CLEAR
+TYPE
+IF
+THEN
+ELSE
+FI
+FOR
+IN
+DO
+ROF
+ADD
+TO
+PRINT
+STOP

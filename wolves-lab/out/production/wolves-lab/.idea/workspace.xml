@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="728afd7a-cf5a-42b0-a27e-a9ef445eae8d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1p9oQGAX1fPgzrkIwsfe66QZmmG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="WolvesApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WolvesApp" />
+      <module name="wolves-lab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WolvesApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="728afd7a-cf5a-42b0-a27e-a9ef445eae8d" name="Default Changelist" comment="" />
+      <created>1614604648585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614604648585</updated>
+      <workItem from="1614604651068" duration="5924000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1878" height="131" key="GridCell.Tab.0.bottom" timestamp="1614610633048">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="131" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1614610492456" />
+    <state width="1878" height="131" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.25.1680.1025@1680.0.1920.1080" timestamp="1614610633048" />
+    <state width="1878" height="131" key="GridCell.Tab.0.center" timestamp="1614610633046">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="131" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1614610492454" />
+    <state width="1878" height="131" key="GridCell.Tab.0.center/1680.0.1920.1080/0.25.1680.1025@1680.0.1920.1080" timestamp="1614610633046" />
+    <state width="1878" height="131" key="GridCell.Tab.0.left" timestamp="1614610633046">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="131" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1614610492452" />
+    <state width="1878" height="131" key="GridCell.Tab.0.left/1680.0.1920.1080/0.25.1680.1025@1680.0.1920.1080" timestamp="1614610633046" />
+    <state width="1878" height="131" key="GridCell.Tab.0.right" timestamp="1614610633047">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="131" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1614610492455" />
+    <state width="1878" height="131" key="GridCell.Tab.0.right/1680.0.1920.1080/0.25.1680.1025@1680.0.1920.1080" timestamp="1614610633047" />
+    <state x="2304" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1615383119603">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2304" y="369" key="com.intellij.ide.util.TipDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1615383119603" />
+  </component>
+</project>
