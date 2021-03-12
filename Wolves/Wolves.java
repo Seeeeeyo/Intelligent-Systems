@@ -265,4 +265,19 @@ public class Wolves {
         return preys;
     }
 
+    public int getNumWolves(){
+        return numWolves;
+    }
+
+    public int getNumPreys(){
+        return numPreys;
+    }
+
+    public int getVisibility(){
+        return visibility;
+    }
+    public int getMinCaptured(){
+        return minCaptured;
+    }
+
 }
