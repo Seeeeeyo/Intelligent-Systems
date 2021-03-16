@@ -17,8 +17,8 @@ public class Main {
 		
 		int cnt = 0;
 		for (int i=0; i<5; i++) {
-			Agent agent1 = new QLearnerBoltzmann(2);
-			Agent agent2 = new QLearnerBoltzmann(2);
+			Agent agent1 = new MinMaxAgent(2);
+			Agent agent2 = new MinMaxAgent(2);
 			while (cnt < 5000) {
 				int a1 = agent1.selectAction();
 				int a2 = agent2.selectAction();

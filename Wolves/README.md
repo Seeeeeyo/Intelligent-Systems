@@ -7,6 +7,6 @@ You can compile and start from inside of the wolves directory, as follows:
 javac WolvesApp.java
 java WolvesApp
 
-Your own Wolf implementations should be added to the same directory and implemented as part of the wolves directory to guarantee that the App can find them.
+Your own Wolves.Wolf implementations should be added to the same directory and implemented as part of the wolves directory to guarantee that the App can find them.
 
-You only need to adapt the Wolves.java file to (i) make it you your own Wolf classes and (ii) to select between limited or unlimited wolf movement.
+You only need to adapt the Wolves.java file to (i) make it you your own Wolves.Wolf classes and (ii) to select between limited or unlimited wolf movement.

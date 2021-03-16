@@ -16,9 +16,9 @@ public class run {
         int squaresize = 15;
         int delay = 1;
         counter++;
-        //System.out.println(counter);
+        System.out.println(counter);
         WolvesApp wol = new WolvesApp("Hungry Hungry Wolves", height, width, squaresize);
-        //System.out.println("counter: " + counter);
+        System.out.println("counter: " + counter);
         wol.runGoL(delay);
     }
 }

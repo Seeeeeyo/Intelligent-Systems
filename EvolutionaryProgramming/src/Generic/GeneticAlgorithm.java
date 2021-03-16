@@ -6,22 +6,20 @@ public abstract class GeneticAlgorithm {
     public void run(int sizePopulation, double probabilityCrossover, double probabilityMutation, int maxGeneration, int numberOfParents) {
         Individual[] population = this.generatePopulation(sizePopulation);
 
-        System.out.print("Population -> ");
-        System.out.println(Arrays.toString(population));
+        System.out.println("Population -> " + Arrays.toString(population));
 
         int generationNumber = 0;
+        int[] maxFitness = new int[maxGeneration];
 
         System.out.println("Current Max Fitness -> " + maxFitness(population));
 
         do {
-            //System.out.println("-------------------");
-            generationNumber++;
-            //System.out.println("Generation -> " + generationNumber);
+            System.out.println("-------------------");
+            System.out.println("Generation -> " + generationNumber + 1);
 
             Individual[] parents = this.selection(population, numberOfParents);
 
-            //System.out.print("Parents -> ");
-            //System.out.println(parents.length + " " + Arrays.toString(parents));
+            System.out.println("Parents -> " + Arrays.toString(parents));
 
             Individual[] children = this.crossover(parents, probabilityCrossover, sizePopulation);
             children = this.mutation(children, probabilityMutation);
@@ -36,10 +34,13 @@ public abstract class GeneticAlgorithm {
 
             this.setFitness(population);
 
-            //System.out.println("Current Max Fitness -> " + maxFitness(population));
+            maxFitness[generationNumber] = maxFitness(population);
+            System.out.println("Current Max Fitness -> " + maxFitness(population));
+            generationNumber++;
         } while (generationNumber < maxGeneration);
 
-        System.out.println("Current Max Fitness -> " + maxFitness(population));
+        System.out.println("-------------------");
+        System.out.println("All Max Fitness -> " +  Arrays.toString(maxFitness));
     }
 
     public int maxFitness(Individual[] population) {

@@ -1,5 +1,8 @@
-import javax.swing.*;
 import java.util.*;
+import Wolves.Wolf;
+import Wolves.HybridWolf;
+
+import javax.swing.*;
 
 public class Wolves {
 
@@ -10,11 +13,11 @@ public class Wolves {
     private int min_surround;
     public int[][] grid;
     private int rows, cols;
-    private int[] wolfRow = new int[numWolves];
-    private int[] wolfCol = new int[numWolves];
-    private int[] preyRow = new int[numPreys];
-    private int[] preyCol = new int[numPreys];
-    private Wolf[] wolves = new Wolf[numWolves];
+    private int[] wolfRow;
+    private int[] wolfCol;
+    private int[] preyRow;
+    private int[] preyCol;
+    private Wolf[] wolves;
     private List<Integer> capturedList = new ArrayList<>();
     private Random r = new Random();
     private WolvesUI visuals;
@@ -65,17 +68,12 @@ public class Wolves {
 
     private void initWolves() {
         // You should put your own wolves in the array here!!
-        Wolf[] wolvesPool = new Wolf[6];
+        Wolf[] wolvesPool = new Wolf[5];
         wolvesPool[0] = new HybridWolf();
         wolvesPool[1] = new HybridWolf();
         wolvesPool[2] = new HybridWolf();
         wolvesPool[3] = new HybridWolf();
         wolvesPool[4] = new HybridWolf();
-        wolvesPool[5] = new HybridWolf();
-        //wolvesPool[6] = new FollowerWolf();
-        //wolvesPool[7] = new FollowerWolf();
-        //wolvesPool[8] = new FollowerWolf();
-        //wolvesPool[9] = new FollowerWolf();
 
         // Below code will select three random wolves from the pool.
         // Make the pool as large as you want, but not < numWolves
@@ -111,15 +109,15 @@ public class Wolves {
         }
 
         // here we ask for the wolves moves; to change the movement style, change the limitMovement variable
-        boolean limitMovement = false;
+        boolean limitMovement = true;
 
         int[][] safetyGrid;
         if (!limitMovement) {
             // Wolves can move diagonally
-            for (int i = 0; i<numWolves; i++) {
+            for (int i = 0; i < numWolves; i++) {
                 safetyGrid = new int[grid.length][grid[0].length];
-                for (int r=0; r<grid.length; r++)
-                    for (int s=0; s<grid[0].length; s++)
+                for (int r = 0; r < grid.length; r++)
+                    for (int s = 0; s < grid[0].length; s++)
                         safetyGrid[r][s] = grid[r][s];
                 moves[i] = wolves[i].moveAll(getWolfViewW(i), getWolfViewP(i));
             }
@@ -184,19 +182,18 @@ public class Wolves {
 
         //check whether enough preys have been captured
         if (capturedList.size() >= minCaptured) {
-            if((System.currentTimeMillis() - run.StartTime) <= 600000) {
+            if ((System.currentTimeMillis() - run.StartTime) <= 600000) {
                 //JOptionPane.showMessageDialog(null, "Wolves won in " + tickcounter + " steps!!");
                 //System.out.println("Winners");
                 System.out.println("rounds: " + tickcounter);
                 run.rounds.add(tickcounter);
                 run.launch();
-            }
-            else{
-                OutputCSV output = new OutputCSV(numWolves ,numPreys, visibility, minCaptured,min_surround,true);
+            } else {
+                OutputCSV output = new OutputCSV(numWolves, numPreys, visibility, minCaptured, min_surround, true);
                 output.writeResume();
                 System.exit(0);
             }
-            //System.exit(0);
+            System.exit(0);
         }
     }
 
