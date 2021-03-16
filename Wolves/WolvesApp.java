@@ -13,7 +13,7 @@ public class WolvesApp extends JFrame {
 		
 	private Wolves game;
 	private JPanel control;
-	private boolean paused = true;
+	private boolean paused = false;
 
 	public WolvesApp(String title, int numbrows, int numbcols, int squaresize) {
 		
@@ -29,8 +29,16 @@ public class WolvesApp extends JFrame {
 		setLocation(left, top);
 
 		//Wolves(numbrows, numbcols, numbWolves, numbPrey, visibilityRangePrey, minCapturedToEndGame(leave at 1), numberOfWolvesNeededToCaptureAPrey)
-		game = new Wolves(numbrows, numbcols,3,10,5,1, 2); 
-		
+		int number_wolves = 6;
+		int number_preys = 10;
+		// int[] wolves_types =
+		boolean homogeneous = true;
+		int wolves_to_catch_preys = 2;
+		// int number_rounds =
+		int visibility = 5;
+		int min_prays_captured = 1;
+		game = new Wolves(numbrows, numbcols,number_wolves,number_preys,visibility,min_prays_captured, wolves_to_catch_preys);
+
 		WolvesUI panel = new WolvesUI(game,squaresize);
 		add(panel, BorderLayout.CENTER);
 		
@@ -54,7 +62,7 @@ public class WolvesApp extends JFrame {
 		add(control, BorderLayout.NORTH);
 		
 		pack();
-		this.setVisible(true);
+		this.setVisible(false);
 	}
 
 	protected void togglePaused() {
@@ -73,12 +81,12 @@ public class WolvesApp extends JFrame {
 
 
 	public static void main(String[] args) {
-		
+
 		int width = 50;
 		int height = 50;
 		int squaresize = 15;
 		int delay = 100;
-		
+
 		//Parameters
 		try {
 			for (int tmp = 0 ; tmp < args.length ; tmp++) {
@@ -112,10 +120,8 @@ public class WolvesApp extends JFrame {
 			System.err.println("");
 			System.exit(-1);
 		}
-		
+
 		WolvesApp wol = new WolvesApp("Hungry Hungry Wolves", height, width, squaresize);
 		wol.runGoL(delay);
 	}
-
-
 }

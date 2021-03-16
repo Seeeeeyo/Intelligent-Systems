@@ -65,12 +65,17 @@ public class Wolves {
 
     private void initWolves() {
         // You should put your own wolves in the array here!!
-        Wolf[] wolvesPool = new Wolf[5];
-        wolvesPool[0] = new FollowerWolf();
-        wolvesPool[1] = new FollowerWolf();
-        wolvesPool[2] = new FollowerWolf();
-        wolvesPool[3] = new FollowerWolf();
-        wolvesPool[4] = new FollowerWolf();
+        Wolf[] wolvesPool = new Wolf[6];
+        wolvesPool[0] = new HybridWolf();
+        wolvesPool[1] = new HybridWolf();
+        wolvesPool[2] = new HybridWolf();
+        wolvesPool[3] = new HybridWolf();
+        wolvesPool[4] = new HybridWolf();
+        wolvesPool[5] = new HybridWolf();
+        //wolvesPool[6] = new FollowerWolf();
+        //wolvesPool[7] = new FollowerWolf();
+        //wolvesPool[8] = new FollowerWolf();
+        //wolvesPool[9] = new FollowerWolf();
 
         // Below code will select three random wolves from the pool.
         // Make the pool as large as you want, but not < numWolves
@@ -179,9 +184,19 @@ public class Wolves {
 
         //check whether enough preys have been captured
         if (capturedList.size() >= minCaptured) {
-            JOptionPane.showMessageDialog(null, "Wolves won in " + tickcounter + " steps!!");
-            System.out.println("Winners");
-            System.exit(0);
+            if((System.currentTimeMillis() - run.StartTime) <= 600000) {
+                //JOptionPane.showMessageDialog(null, "Wolves won in " + tickcounter + " steps!!");
+                //System.out.println("Winners");
+                System.out.println("rounds: " + tickcounter);
+                run.rounds.add(tickcounter);
+                run.launch();
+            }
+            else{
+                OutputCSV output = new OutputCSV(numWolves ,numPreys, visibility, minCaptured,min_surround,true);
+                output.writeResume();
+                System.exit(0);
+            }
+            //System.exit(0);
         }
     }
 
@@ -265,19 +280,5 @@ public class Wolves {
         return preys;
     }
 
-    public int getNumWolves(){
-        return numWolves;
-    }
-
-    public int getNumPreys(){
-        return numPreys;
-    }
-
-    public int getVisibility(){
-        return visibility;
-    }
-    public int getMinCaptured(){
-        return minCaptured;
-    }
 
 }
